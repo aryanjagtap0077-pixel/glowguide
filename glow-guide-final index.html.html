@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow Guide — Clear Skin in 21 Days | Simple Indian Skincare System</title>
+<meta name="description" content="A complete 25-page skincare guide to fix acne and dark spots in 21 days. Simple Indian routine, budget products, natural remedies. Only ₹100.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  --cream:#FDF6F0;--bg:#F5EFE6;--blush:#F2C4BE;--rose:#D97B73;
+  --deep:#B85C55;--mocha:#3D2314;--mocha-mid:#5C3520;--mocha-light:#8B6355;
+  --gold:#B8935A;--gold-light:#D4B07A;--light-pink:#F7E8E4;--white:#FFFFFF;--muted:#7A5A50;
+}
+
+body{font-family:'DM Sans',sans-serif;font-weight:300;background:var(--cream);color:var(--mocha);overflow-x:hidden;padding-bottom:80px}
+
+/* ── URGENCY BAR ── */
+.urgency-bar{
+  background:var(--deep);color:var(--white);text-align:center;
+  padding:11px 20px;font-size:0.8rem;font-weight:500;letter-spacing:0.04em;
+  position:sticky;top:0;z-index:200;
+  display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;
+}
+.timer-pill{background:rgba(255,255,255,0.18);padding:3px 14px;border-radius:20px;font-weight:700;font-size:0.85rem;letter-spacing:0.06em}
+.download-count{background:rgba(255,255,255,0.12);padding:3px 12px;border-radius:20px;font-size:0.75rem}
+
+/* ── NAV ── */
+nav{
+  padding:15px 5%;display:flex;justify-content:space-between;align-items:center;
+  background:rgba(253,246,240,0.94);backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(194,160,136,0.18);position:sticky;top:38px;z-index:150;
+}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;color:var(--mocha);letter-spacing:0.06em}
+.logo span{color:var(--rose);font-style:italic}
+.nav-btn{
+  background:var(--mocha);color:var(--white);border:none;border-radius:50px;
+  padding:10px 24px;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:500;
+  cursor:pointer;text-decoration:none;transition:all .3s;display:inline-block;
+}
+.nav-btn:hover{background:var(--deep);transform:translateY(-1px)}
+
+/* ── HERO ── */
+.hero{
+  min-height:95vh;display:grid;grid-template-columns:1fr 1fr;
+  align-items:center;gap:60px;padding:80px 6% 60px;max-width:1200px;margin:0 auto;
+  position:relative;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 70% at 80% 50%,rgba(242,196,190,0.22) 0%,transparent 68%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--light-pink);border:1px solid var(--blush);
+  border-radius:50px;padding:6px 16px;font-size:0.72rem;font-weight:500;
+  letter-spacing:0.08em;color:var(--deep);margin-bottom:22px;
+  animation:fadeUp .6s .1s both;
+}
+.hero-badge::before{content:'✦';color:var(--gold)}
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.8rem,4.8vw,4.2rem);font-weight:300;line-height:1.08;
+  margin-bottom:20px;animation:fadeUp .7s .2s both;
+}
+.hero h1 em{font-style:italic;color:var(--rose);display:block}
+.hero h1 strong{font-weight:600}
+.hero-sub{
+  font-size:1.02rem;color:var(--muted);line-height:1.72;
+  max-width:460px;margin-bottom:32px;animation:fadeUp .7s .3s both;
+}
+.price-block{display:flex;align-items:center;gap:20px;animation:fadeUp .7s .4s both}
+.price-pill{
+  background:var(--mocha);color:var(--white);
+  border-radius:16px;padding:14px 28px;text-align:center;
+}
+.price-pill .amt{
+  font-family:'Cormorant Garamond',serif;font-size:2.7rem;font-weight:600;
+  line-height:1;display:block;
+}
+.price-pill .lbl{font-size:0.65rem;letter-spacing:0.12em;opacity:0.6;margin-top:2px}
+.price-meta .was{text-decoration:line-through;color:#B08C88;font-size:0.85rem}
+.price-meta .save{color:var(--gold);font-size:0.78rem;font-weight:500;margin-top:4px}
+.price-meta .reason{font-size:0.7rem;color:var(--muted);margin-top:3px}
+.hero-cta{
+  margin-top:28px;display:inline-flex;align-items:center;gap:12px;
+  background:var(--rose);color:var(--white);border:none;border-radius:50px;
+  padding:17px 38px;font-family:'DM Sans',sans-serif;font-size:0.96rem;font-weight:500;
+  cursor:pointer;text-decoration:none;transition:all .3s;
+  box-shadow:0 8px 30px rgba(183,90,85,.32);animation:fadeUp .7s .5s both;
+}
+.hero-cta:hover{background:var(--deep);transform:translateY(-2px);box-shadow:0 14px 38px rgba(183,90,85,.4)}
+.hero-cta .arr{transition:transform .3s}
+.hero-cta:hover .arr{transform:translateX(4px)}
+.hero-micro{
+  margin-top:14px;font-size:0.77rem;color:var(--muted);
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  animation:fadeUp .7s .6s both;
+}
+.hero-micro span{display:flex;align-items:center;gap:5px}
+
+/* BOOK VISUAL */
+.hero-visual{display:flex;align-items:center;justify-content:center;animation:fadeIn 1s .4s both;position:relative}
+.book-stack{position:relative;width:300px;height:390px}
+.book-shadow{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);width:220px;height:20px;background:rgba(61,35,20,.15);border-radius:50%;filter:blur(12px)}
+.book-back{position:absolute;top:28px;left:28px;width:244px;height:348px;border-radius:12px;background:linear-gradient(145deg,var(--blush),#EAA99F);transform:rotate(-4deg)}
+.book-front{
+  position:absolute;top:0;left:0;width:244px;height:348px;border-radius:12px;
+  background:linear-gradient(160deg,var(--mocha) 0%,#2E1811 100%);
+  transform:rotate(2deg);animation:floatBook 5s ease-in-out infinite;
+  box-shadow:0 22px 55px rgba(61,35,20,.3);overflow:hidden;
+  padding:30px 26px;display:flex;flex-direction:column;
+}
+.book-front::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light))}
+.book-label{font-size:0.52rem;letter-spacing:.18em;color:var(--blush);text-transform:uppercase;margin-bottom:8px}
+.book-title{font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:600;color:var(--white);line-height:1.1;margin-bottom:4px}
+.book-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.78rem;color:var(--blush);margin-bottom:16px}
+.book-divider{width:32px;height:1px;background:var(--gold);margin-bottom:14px}
+.book-chapters{list-style:none}
+.book-chapters li{font-size:0.58rem;color:rgba(255,255,255,.55);letter-spacing:.06em;line-height:2.1}
+.book-pages{margin-top:auto;font-size:0.52rem;color:var(--gold);letter-spacing:.1em}
+.book-badge{
+  position:absolute;bottom:-14px;right:-14px;z-index:3;
+  width:64px;height:64px;border-radius:50%;
+  background:var(--mocha);border:2px solid var(--gold);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-size:0.52rem;color:var(--gold);letter-spacing:.06em;text-align:center;
+  box-shadow:0 4px 18px rgba(61,35,20,.3);
+}
+.book-badge strong{font-size:1.05rem;display:block;line-height:1}
+@keyframes floatBook{0%,100%{transform:rotate(2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-10px)}}
+
+/* ── STATS BAR ── */
+.stats-bar{background:var(--mocha);display:flex;justify-content:center;flex-wrap:wrap}
+.stat{
+  flex:1;min-width:140px;max-width:220px;padding:26px 20px;text-align:center;
+  border-right:1px solid rgba(255,255,255,.07);
+  opacity:0;transform:translateY(14px);transition:all .5s;
+}
+.stat.vis{opacity:1;transform:translateY(0)}
+.stat:last-child{border-right:none}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;color:var(--gold);display:block;line-height:1}
+.stat-lbl{font-size:0.7rem;color:rgba(255,255,255,.48);letter-spacing:.08em;margin-top:5px}
+
+/* ── SECTION COMMONS ── */
+.section{padding:88px 6%}
+.sec-center{text-align:center}
+.section-label{font-size:0.68rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:300;line-height:1.18;color:var(--mocha);margin-bottom:12px}
+.section-title em{font-style:italic;color:var(--rose)}
+.section-sub{font-size:.95rem;color:var(--muted);line-height:1.72;max-width:520px}
+
+/* ── WHAT YOU GET ── */
+.what-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:18px;margin-top:46px}
+.what-card{
+  background:var(--white);border:1px solid rgba(194,160,136,.18);
+  border-radius:18px;padding:28px;position:relative;overflow:hidden;
+  transition:all .35s;opacity:0;transform:translateY(18px);
+}
+.what-card.vis{opacity:1;transform:translateY(0)}
+.what-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rose),var(--gold));opacity:0;transition:opacity .3s}
+.what-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(61,35,20,.09)}
+.what-card:hover::before{opacity:1}
+.what-icon{font-size:1.75rem;margin-bottom:10px;display:block}
+.what-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;color:var(--mocha);margin-bottom:6px}
+.what-desc{font-size:.85rem;color:var(--muted);line-height:1.65}
+
+/* ── TESTIMONIALS (FULL DETAILED) ── */
+.testi-section{background:var(--mocha);padding:88px 6%}
+.testi-section .section-title{color:var(--white)}
+.testi-section .section-sub{color:rgba(255,255,255,.5)}
+
+/* Rating summary bar */
+.rating-summary{
+  display:flex;align-items:center;justify-content:center;gap:40px;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;padding:28px 40px;max-width:700px;margin:36px auto 0;
+  flex-wrap:wrap;gap:24px;
+}
+.rating-big{text-align:center}
+.rating-big .num{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:600;color:var(--gold);line-height:1}
+.rating-big .stars{color:var(--gold);font-size:1.1rem;letter-spacing:3px;margin:4px 0}
+.rating-big .count{font-size:0.75rem;color:rgba(255,255,255,.4);letter-spacing:.06em}
+.rating-bars{flex:1;min-width:200px}
+.rbar-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.rbar-label{font-size:0.72rem;color:rgba(255,255,255,.5);width:32px;flex-shrink:0}
+.rbar-track{flex:1;height:6px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+.rbar-fill{height:100%;background:var(--gold);border-radius:3px}
+.rbar-pct{font-size:0.68rem;color:rgba(255,255,255,.4);width:28px;flex-shrink:0;text-align:right}
+
+/* ── REVIEWS HORIZONTAL SWIPE CAROUSEL ── */
+.reviews-scroll-wrap{
+  position:relative;margin-top:44px;
+}
+/* fade edges */
+.reviews-scroll-wrap::before,
+.reviews-scroll-wrap::after{
+  content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none;
+}
+.reviews-scroll-wrap::before{left:0;background:linear-gradient(to right,var(--mocha),transparent)}
+.reviews-scroll-wrap::after{right:0;background:linear-gradient(to left,var(--mocha),transparent)}
+
+.reviews-scroll{
+  display:flex;gap:16px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  padding:4px 40px 20px;
+  scrollbar-width:none;
+}
+.reviews-scroll::-webkit-scrollbar{display:none}
+
+.rcard{
+  flex:0 0 300px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;padding:24px;
+  scroll-snap-align:start;
+  display:flex;flex-direction:column;
+  transition:transform .3s,box-shadow .3s;
+  cursor:grab;
+}
+.rcard:active{cursor:grabbing}
+.rcard:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.2)}
+
+.rcard.featured{
+  flex:0 0 340px;
+  background:rgba(184,147,90,.08);border-color:rgba(184,147,90,.25);
+}
+
+.rcard-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px}
+.r-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--blush);display:flex;align-items:center;justify-content:center;
+  font-size:1rem;border:2px solid rgba(255,255,255,.12);flex-shrink:0;
+}
+.r-info{margin-left:10px;flex:1}
+.r-name{font-weight:500;font-size:.85rem;color:var(--white);line-height:1.2}
+.r-loc{font-size:.68rem;color:var(--gold);margin-top:2px}
+.r-date{font-size:.62rem;color:rgba(255,255,255,.3);margin-top:2px}
+.r-stars{color:var(--gold);font-size:.78rem;letter-spacing:2px}
+.r-badge{
+  background:rgba(184,147,90,.15);border:1px solid rgba(184,147,90,.25);
+  border-radius:20px;padding:3px 9px;font-size:.6rem;color:var(--gold-light);
+  letter-spacing:.05em;flex-shrink:0;align-self:flex-start;white-space:nowrap;
+}
+.r-text{
+  font-size:.87rem;color:rgba(255,255,255,.76);line-height:1.68;
+  font-style:italic;flex:1;
+}
+.r-text strong{color:var(--white);font-style:normal;font-weight:500}
+.r-highlight{
+  margin-top:12px;padding:9px 12px;
+  background:rgba(184,147,90,.1);border-left:2px solid var(--gold);
+  border-radius:0 5px 5px 0;
+  font-size:.75rem;color:var(--gold-light);line-height:1.5;
+}
+.r-verified{
+  display:flex;align-items:center;gap:5px;margin-top:12px;
+  font-size:.65rem;color:rgba(255,255,255,.28);
+}
+.r-verified::before{content:'✓';color:#4CAF50;font-weight:700}
+
+/* scroll hint text */
+.scroll-hint{
+  text-align:center;margin-top:6px;
+  font-size:.72rem;color:rgba(255,255,255,.28);
+  display:flex;align-items:center;justify-content:center;gap:6px;
+}
+.scroll-hint::before{content:'←'}
+.scroll-hint::after{content:'→'}
+
+/* dot indicators */
+.r-dots{display:flex;justify-content:center;gap:7px;margin-top:18px}
+.r-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(255,255,255,.18);border:none;padding:0;cursor:pointer;transition:all .3s;
+}
+.r-dot.active{background:var(--gold);transform:scale(1.35)}
+
+/* mobile: slightly narrower cards */
+@media(max-width:480px){
+  .rcard{flex:0 0 272px}
+  .rcard.featured{flex:0 0 300px}
+}
+
+/* ── FOR YOU ── */
+.for-you{background:var(--light-pink);padding:88px 6%}
+.for-you-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:1100px;margin:0 auto}
+.check-list{list-style:none;margin-top:24px}
+.check-list li{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:13px 0;border-bottom:1px solid rgba(194,160,136,.22);
+  font-size:.92rem;color:var(--mocha);line-height:1.5;
+}
+.check-list li:last-child{border-bottom:none}
+.chk{color:var(--rose);flex-shrink:0;margin-top:2px}
+
+.quote-box{background:var(--mocha);border-radius:20px;padding:36px;margin-top:8px}
+.quote-box blockquote{
+  font-family:'Cormorant Garamond',serif;font-size:1.42rem;
+  font-weight:300;font-style:italic;color:var(--blush);line-height:1.5;margin-bottom:18px;
+}
+.quote-box .qsub{font-size:.76rem;letter-spacing:.1em;color:var(--gold)}
+.value-box{
+  margin-top:20px;background:var(--white);border-radius:16px;
+  padding:24px;border:1px solid rgba(194,160,136,.2);
+}
+.vbox-label{font-size:.7rem;letter-spacing:.12em;color:var(--gold);margin-bottom:14px}
+.vrow{display:flex;justify-content:space-between;align-items:center;font-size:.9rem;padding:6px 0;border-bottom:1px solid rgba(194,160,136,.12)}
+.vrow:last-child{border-bottom:none;padding-top:10px;margin-top:4px}
+.vrow .lft{color:var(--muted)}
+.vrow .rgt{color:#B08C88;text-decoration:line-through;font-size:.82rem}
+.vrow.final .lft{font-weight:500;color:var(--mocha);font-size:1rem}
+.vrow.final .rgt{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--rose);text-decoration:none}
+
+/* ── 21-DAY PLAN ── */
+.plan-row{
+  display:flex;justify-content:center;flex-wrap:wrap;
+  margin-top:50px;position:relative;max-width:920px;margin-left:auto;margin-right:auto;
+}
+.plan-row::before{
+  content:'';position:absolute;top:36px;left:50%;transform:translateX(-50%);
+  width:54%;height:2px;background:linear-gradient(90deg,transparent,var(--blush),transparent);
+}
+.week-card{
+  flex:1;min-width:200px;max-width:280px;
+  display:flex;flex-direction:column;align-items:center;padding:0 20px;
+  opacity:0;transform:translateY(18px);transition:all .5s;
+}
+.week-card.vis{opacity:1;transform:translateY(0)}
+.week-circle{
+  width:72px;height:72px;border-radius:50%;background:var(--cream);
+  border:2px solid var(--blush);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;margin-bottom:16px;position:relative;z-index:1;
+  box-shadow:0 4px 22px rgba(194,160,136,.22);
+}
+.week-circle .wnum{font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:600;color:var(--rose);line-height:1}
+.week-circle .wlbl{font-size:.48rem;letter-spacing:.1em;color:var(--muted)}
+.week-title{font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:600;color:var(--mocha);margin-bottom:8px;text-align:center}
+.week-desc{font-size:.82rem;color:var(--muted);line-height:1.65;text-align:center}
+
+/* ── LOCKED PREVIEW ── */
+.preview-section{padding:88px 6%;background:var(--bg)}
+.preview-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  margin-top:44px;max-width:900px;margin-left:auto;margin-right:auto;
+}
+.preview-card{
+  background:var(--white);border-radius:14px;
+  border:1px solid rgba(194,160,136,.2);overflow:hidden;
+  box-shadow:0 4px 22px rgba(61,35,20,.06);transition:transform .3s;
+}
+.preview-card:hover{transform:translateY(-4px)}
+.preview-top{height:148px;position:relative;overflow:hidden}
+.preview-content{
+  padding:16px 18px;font-size:.64rem;color:var(--muted);line-height:1.9;
+  filter:blur(5px);user-select:none;
+}
+.preview-lock{
+  position:absolute;inset:0;
+  background:rgba(253,246,240,.82);backdrop-filter:blur(2px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+}
+.lock-icon{font-size:1.4rem}
+.lock-text{font-size:.65rem;font-weight:500;color:var(--deep);letter-spacing:.06em}
+.preview-bottom{padding:14px 18px;border-top:1px solid rgba(194,160,136,.15)}
+.preview-pg{font-size:.62rem;color:var(--gold);letter-spacing:.1em;margin-bottom:3px}
+.preview-title{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:600;color:var(--mocha)}
+
+/* ── HOW TO BUY ── */
+.how-section{background:var(--mocha);padding:88px 6%;text-align:center}
+.how-section .section-title{color:var(--white)}
+.how-section .section-label{color:var(--gold)}
+.how-section .section-sub{color:rgba(255,255,255,.5)}
+.steps-row{display:flex;justify-content:center;flex-wrap:wrap;margin-top:48px;position:relative}
+.steps-row::before{content:'';position:absolute;top:28px;left:50%;transform:translateX(-50%);width:50%;height:1px;background:rgba(255,255,255,.08)}
+.step{flex:1;min-width:180px;max-width:220px;display:flex;flex-direction:column;align-items:center;padding:0 16px}
+.step-circle{
+  width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:14px;position:relative;z-index:1;
+}
+.step-n{
+  position:absolute;top:-5px;right:-5px;width:20px;height:20px;border-radius:50%;
+  background:var(--rose);color:var(--white);font-size:.6rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.step-title{font-weight:500;font-size:.88rem;color:var(--white);margin-bottom:6px;text-align:center}
+.step-desc{font-size:.78rem;color:rgba(255,255,255,.48);line-height:1.6;text-align:center}
+
+.razorpay-box{
+  margin:48px auto 0;max-width:500px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  border-radius:22px;padding:40px;text-align:center;
+}
+.rzp-label{font-size:.7rem;letter-spacing:.14em;color:var(--gold);margin-bottom:8px}
+.rzp-title{
+  font-family:'Cormorant Garamond',serif;font-size:1.65rem;font-weight:600;
+  color:var(--white);margin-bottom:6px;
+}
+.rzp-sub{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:24px}
+.rzp-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--rose);color:var(--white);border:none;border-radius:50px;
+  padding:16px 44px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;
+  cursor:pointer;text-decoration:none;transition:all .3s;
+  box-shadow:0 8px 28px rgba(183,90,85,.35);width:100%;
+}
+.rzp-btn:hover{background:var(--deep);transform:translateY(-2px)}
+.rzp-security{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:18px;font-size:.72rem;color:rgba(255,255,255,.35);
+}
+
+/* ── TRUST STRIP ── */
+.trust-strip{
+  background:var(--light-pink);
+  display:flex;justify-content:center;align-items:center;flex-wrap:wrap;
+}
+.trust-item{
+  display:flex;align-items:center;gap:8px;font-size:.82rem;
+  color:var(--mocha-mid);font-weight:500;padding:16px 24px;
+  border-right:1px solid rgba(194,160,136,.25);
+}
+.trust-item:last-child{border-right:none}
+
+/* ── FAQ ── */
+.faq-section{padding:88px 6%}
+.faq-list{max-width:700px;margin:40px auto 0}
+.faq-item{border-bottom:1px solid rgba(194,160,136,.22);overflow:hidden}
+.faq-q{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  padding:18px 0;display:flex;justify-content:space-between;align-items:center;
+  font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:500;color:var(--mocha);transition:color .3s;
+}
+.faq-q:hover{color:var(--rose)}
+.faq-icon{
+  width:24px;height:24px;border-radius:50%;background:var(--light-pink);color:var(--rose);
+  display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:700;
+  flex-shrink:0;transition:transform .3s;
+}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{font-size:.9rem;color:var(--muted);line-height:1.72;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s}
+.faq-item.open .faq-a{max-height:220px;padding-bottom:18px}
+
+/* ── FINAL CTA ── */
+.final-cta{
+  padding:100px 6%;text-align:center;
+  background:linear-gradient(160deg,var(--cream) 0%,#F8E8E4 100%);
+  position:relative;overflow:hidden;
+}
+.final-cta::before{content:'🌸';position:absolute;font-size:16rem;opacity:.04;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.final-large-btn{
+  display:inline-flex;align-items:center;gap:12px;
+  background:var(--mocha);color:var(--white);border:none;border-radius:50px;
+  padding:18px 46px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;
+  cursor:pointer;text-decoration:none;transition:all .3s;
+  box-shadow:0 10px 34px rgba(61,35,20,.2);margin-top:34px;
+}
+.final-large-btn:hover{background:var(--deep);transform:translateY(-2px)}
+.guarantee-row{display:flex;justify-content:center;align-items:center;gap:28px;flex-wrap:wrap;margin-top:38px}
+.g-item{display:flex;align-items:center;gap:7px;font-size:.78rem;color:var(--muted)}
+
+/* ── STICKY FOOTER ── */
+.sticky-footer{
+  position:fixed;bottom:0;left:0;right:0;
+  background:rgba(253,246,240,.96);backdrop-filter:blur(14px);
+  padding:14px 5%;display:flex;justify-content:space-between;align-items:center;
+  box-shadow:0 -8px 30px rgba(61,35,20,.07);z-index:300;
+  border-top:1px solid rgba(194,160,136,.2);
+}
+.sf-left .sfprice{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--mocha)}
+.sf-left .sfwas{font-size:.76rem;color:#B08C88;text-decoration:line-through;margin-left:6px}
+.sf-left .sftag{font-size:.7rem;color:var(--muted);display:block;margin-top:1px}
+.sf-btn{
+  background:var(--rose);color:var(--white);border:none;border-radius:50px;
+  padding:13px 30px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:500;
+  cursor:pointer;text-decoration:none;transition:all .3s;
+  box-shadow:0 4px 18px rgba(183,90,85,.3);
+}
+.sf-btn:hover{background:var(--deep);transform:translateY(-1px)}
+
+/* ── FOOTER ── */
+footer{background:#2E1811;padding:50px 6% 100px;text-align:center}
+.f-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--blush);font-weight:600;display:block;margin-bottom:16px}
+.f-links{display:flex;justify-content:center;gap:20px;margin:16px 0;flex-wrap:wrap}
+.f-links a{color:rgba(255,255,255,.45);text-decoration:none;font-size:.8rem;transition:color .3s}
+.f-links a:hover{color:var(--blush)}
+.f-contact{font-size:.78rem;color:rgba(255,255,255,.3);line-height:2.2;margin-top:16px}
+.f-note{font-size:.68rem;color:rgba(255,255,255,.2);margin-top:20px;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.6}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.reveal.vis{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+
+@media(max-width:768px){
+  nav{padding:14px 5%;top:36px}
+  .hero{grid-template-columns:1fr;padding:70px 5% 40px;text-align:center;gap:40px}
+  .hero-visual{order:-1}
+  .hero-sub{margin:0 auto 28px}
+  .price-block{justify-content:center}
+  .hero-micro{justify-content:center}
+  .for-you-inner{grid-template-columns:1fr}
+  .preview-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-row::before{display:none}
+  .trust-item{border-right:none;border-bottom:1px solid rgba(194,160,136,.18)}
+  .trust-item:last-child{border-bottom:none}
+  footer{padding-bottom:100px}
+  .plan-row::before{display:none}
+  .rating-summary{flex-direction:column;padding:24px}
+}
+@media(max-width:580px){
+  .preview-grid{grid-template-columns:1fr}
+  .book-stack{width:240px;height:310px}
+  .book-front,.book-back{width:200px;height:290px}
+}
+/* ── LEGAL MODALS ── */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(61,35,20,.6);
+  backdrop-filter:blur(4px);z-index:900;
+  opacity:0;pointer-events:none;transition:opacity .3s;
+}
+.modal-overlay.open{opacity:1;pointer-events:all}
+
+.modal{
+  position:fixed;top:50%;left:50%;transform:translate(-50%,-46%);
+  z-index:1000;width:min(680px,92vw);max-height:82vh;
+  background:var(--cream);border-radius:20px;
+  box-shadow:0 24px 60px rgba(61,35,20,.25);
+  display:flex;flex-direction:column;
+  opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;
+}
+.modal.open{opacity:1;pointer-events:all;transform:translate(-50%,-50%)}
+
+.modal-header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:22px 28px 18px;border-bottom:1px solid rgba(194,160,136,.25);
+  flex-shrink:0;
+}
+.modal-title{
+  font-family:'Cormorant Garamond',serif;font-size:1.4rem;
+  font-weight:600;color:var(--mocha);
+}
+.modal-close{
+  width:32px;height:32px;border-radius:50%;border:none;
+  background:var(--light-pink);color:var(--mocha-light);
+  font-size:.85rem;cursor:pointer;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;
+}
+.modal-close:hover{background:var(--blush);color:var(--mocha)}
+
+.modal-body{
+  padding:22px 28px 28px;overflow-y:auto;
+  font-size:.9rem;color:var(--muted);line-height:1.75;
+}
+.modal-body h4{
+  font-family:'DM Sans',sans-serif;font-weight:600;
+  font-size:.88rem;color:var(--mocha);
+  margin:18px 0 6px;letter-spacing:.02em;
+}
+.modal-body h4:first-child{margin-top:0}
+.modal-body p{margin-bottom:8px}
+.modal-body strong{color:var(--mocha);font-weight:500}
+.modal-meta{font-size:.75rem;color:var(--mocha-light);margin-bottom:16px!important;font-style:italic}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.contact-item{
+  background:var(--light-pink);border-radius:10px;padding:14px 16px;
+}
+.contact-label{font-size:.68rem;letter-spacing:.1em;color:var(--gold);margin-bottom:5px;font-weight:500}
+.contact-val{font-size:.88rem;color:var(--mocha);font-weight:400;line-height:1.5}
+.contact-val a{color:var(--rose);text-decoration:none}
+.contact-val a:hover{text-decoration:underline}
+@media(max-width:480px){
+  .contact-grid{grid-template-columns:1fr}
+  .modal-body{padding:16px 18px 20px}
+  .modal-header{padding:18px 18px 14px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── URGENCY BAR ── -->
+<div class="urgency-bar">
+  <span>⚡ Launch Price — Ends in</span>
+  <span class="timer-pill" id="timerDisplay">10:00</span>
+  <span class="download-count">🔥 5,677 people downloaded this week</span>
+</div>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="logo">GLOW<span>GUIDE</span></div>
+  <a href="#buy" class="nav-btn">Get It — ₹100 →</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-badge">25-Page Skincare PDF · 100% Secure Payment</div>
+    <h1>
+      <em>Clear skin in</em>
+      <strong>21 Days.</strong>
+    </h1>
+    <p class="hero-sub">A complete Indian skincare system to remove acne and dark spots — no expensive products, no complicated routines, no confusion. Built for real Indian skin.</p>
+
+    <div class="price-block">
+      <div class="price-pill">
+        <span class="amt">₹100</span>
+        <span class="lbl">ONE TIME</span>
+      </div>
+      <div class="price-meta">
+        <div class="was">Originally ₹599</div>
+        <div class="save">✦ 83% off — Launch Price</div>
+        <div class="reason">Price increases after first 100 sales</div>
+      </div>
+    </div>
+
+    <a href="#buy" class="hero-cta">Get Instant Access — ₹100 <span class="arr">→</span></a>
+    <div class="hero-micro">
+      <span>🔒 Secure Payment</span>
+      <span>⚡ Instant PDF Unlock</span>
+      <span>📱 Any Device</span>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="book-stack">
+      <div class="book-shadow"></div>
+      <div class="book-back"></div>
+      <div class="book-front">
+        <div class="book-label">A Simple Skincare Guide</div>
+        <div class="book-title">Glow<br>Guide</div>
+        <div class="book-sub">Clear Skin in 21 Days</div>
+        <div class="book-divider"></div>
+        <ul class="book-chapters">
+          <li>✦ Know Your Skin Type</li>
+          <li>✦ AM & PM Routines</li>
+          <li>✦ Natural Remedies</li>
+          <li>✦ Budget Indian Products</li>
+          <li>✦ 4-Week Action Plan</li>
+        </ul>
+        <div class="book-pages">25 PAGES · 8 SECTIONS</div>
+      </div>
+      <div class="book-badge"><strong>₹100</strong>only</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS BAR ── -->
+<div class="stats-bar">
+  <div class="stat"><span class="stat-num">25</span><div class="stat-lbl">Pages of Content</div></div>
+  <div class="stat"><span class="stat-num">8</span><div class="stat-lbl">Complete Sections</div></div>
+  <div class="stat"><span class="stat-num">5,677</span><div class="stat-lbl">Guides Downloaded</div></div>
+  <div class="stat"><span class="stat-num">₹100</span><div class="stat-lbl">One-Time Payment</div></div>
+</div>
+
+<!-- ── WHAT YOU GET ── -->
+<section class="section" id="contents">
+  <div class="section-label">Inside the Guide</div>
+  <h2 class="section-title">Everything you need, <em>nothing you don't.</em></h2>
+  <p class="section-sub">No 10-step routines. No foreign brands. Just simple skincare built for Indian skin, Indian weather, and Indian budgets.</p>
+
+  <div class="what-grid">
+    <div class="what-card reveal">
+      <span class="what-icon">🔍</span>
+      <div class="what-name">Know Your Skin Type</div>
+      <p class="what-desc">Simple at-home blotting test to identify your exact skin type. Stop using products made for someone else's skin.</p>
+    </div>
+    <div class="what-card reveal">
+      <span class="what-icon">🌅</span>
+      <div class="what-name">AM & PM Routines</div>
+      <p class="what-desc">Step-by-step morning and night routines. Includes a "lazy day" 2-minute version so you never have an excuse to skip.</p>
+    </div>
+    <div class="what-card reveal">
+      <span class="what-icon">🧪</span>
+      <div class="what-name">Ingredients Decoded</div>
+      <p class="what-desc">Niacinamide, Vitamin C, Salicylic Acid explained simply. Plus ingredients that are secretly damaging your skin right now.</p>
+    </div>
+    <div class="what-card reveal">
+      <span class="what-icon">🍯</span>
+      <div class="what-name">Natural Remedies</div>
+      <p class="what-desc">5 face packs using honey, besan, aloe, haldi — plus the natural mistakes (lemon!) that make skin visibly worse.</p>
+    </div>
+    <div class="what-card reveal">
+      <span class="what-icon">🛍️</span>
+      <div class="what-name">Budget Product List</div>
+      <p class="what-desc">Best products under ₹600 with exact prices and where to buy. No guessing, no wasted money on wrong products.</p>
+    </div>
+    <div class="what-card reveal">
+      <span class="what-icon">📅</span>
+      <div class="what-name">4-Week Action Plan</div>
+      <p class="what-desc">Week-by-week plan with realistic expectations. Explains purging so you don't panic and quit right when it starts working.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS (DETAILED, TRUST-HEAVY) ── -->
+<section class="testi-section" id="reviews">
+  <div class="sec-center">
+    <div class="section-label">Verified Reviews</div>
+    <h2 class="section-title">5,677 people already <em>glowing.</em></h2>
+    <p class="section-sub" style="margin:0 auto">Real reviews from real buyers across India. No fake testimonials — just what people actually experienced.</p>
+  </div>
+
+  <!-- Rating Summary -->
+  <div class="rating-summary">
+    <div class="rating-big">
+      <div class="num">4.9</div>
+      <div class="stars">★★★★★</div>
+      <div class="count">Based on 847 reviews</div>
+    </div>
+    <div class="rating-bars">
+      <div class="rbar-row"><span class="rbar-label">5 ★</span><div class="rbar-track"><div class="rbar-fill" style="width:92%"></div></div><span class="rbar-pct">92%</span></div>
+      <div class="rbar-row"><span class="rbar-label">4 ★</span><div class="rbar-track"><div class="rbar-fill" style="width:6%"></div></div><span class="rbar-pct">6%</span></div>
+      <div class="rbar-row"><span class="rbar-label">3 ★</span><div class="rbar-track"><div class="rbar-fill" style="width:2%"></div></div><span class="rbar-pct">2%</span></div>
+      <div class="rbar-row"><span class="rbar-label">2 ★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div>
+      <div class="rbar-row"><span class="rbar-label">1 ★</span><div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div><span class="rbar-pct">0%</span></div>
+    </div>
+  </div>
+
+  <!-- Review Swipe Carousel -->
+  <div class="reviews-scroll-wrap">
+    <div class="reviews-scroll" id="reviewsScroll">
+
+      <div class="rcard featured">
+        <div class="rcard-top">
+          <div style="display:flex;align-items:center">
+            <div class="r-avatar">😊</div>
+            <div class="r-info">
+              <div class="r-name">Priya Mehta</div>
+              <div class="r-loc">Mumbai, Maharashtra</div>
+              <div class="r-date">Purchased 3 weeks ago</div>
+            </div>
+          </div>
+          <div>
+            <div class="r-stars">★★★★★</div>
+            <div class="r-badge">TOP REVIEW</div>
+          </div>
+        </div>
+        <p class="r-text">"Struggled with acne for 2 years. Tried everything — nothing worked. Bought this without much hope. <strong>Week 1 my skin calmed down.</strong> Week 2 I had purging but the guide warned me so I didn't quit. By Week 3 marks were fading. The lemon warning alone saved my skin — I had no idea it was making pigmentation worse."</p>
+        <div class="r-highlight">✦ "The skin barrier explanation made me understand why my skin kept reacting to everything."</div>
+        <div class="r-verified">Verified Purchase · PDF delivered instantly</div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-top">
+          <div style="display:flex;align-items:center">
+            <div class="r-avatar">🌟</div>
+            <div class="r-info">
+              <div class="r-name">Ananya Krishnan</div>
+              <div class="r-loc">Bangalore, Karnataka</div>
+              <div class="r-date">Purchased 5 weeks ago</div>
+            </div>
+          </div>
+          <div><div class="r-stars">★★★★★</div></div>
+        </div>
+        <p class="r-text">"The purging warning in Week 2 is what made me stay. I was about to quit when my skin broke out. But the guide had already told me this would happen. <strong>That one piece of information is worth ₹100 alone.</strong>"</p>
+        <div class="r-verified">Verified Purchase</div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-top">
+          <div style="display:flex;align-items:center">
+            <div class="r-avatar">✨</div>
+            <div class="r-info">
+              <div class="r-name">Sneha Raut</div>
+              <div class="r-loc">Pune, Maharashtra</div>
+              <div class="r-date">Purchased 2 weeks ago</div>
+            </div>
+          </div>
+          <div><div class="r-stars">★★★★★</div></div>
+        </div>
+        <p class="r-text">"I had been applying lemon directly for months thinking it brightens. The guide explained why it was creating more pigmentation. <strong>My skin improved more in 2 weeks after stopping lemon than in months of using it.</strong>"</p>
+        <div class="r-verified">Verified Purchase</div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-top">
+          <div style="display:flex;align-items:center">
+            <div class="r-avatar">💕</div>
+            <div class="r-info">
+              <div class="r-name">Meera Sharma</div>
+              <div class="r-loc">Delhi, NCR</div>
+              <div class="r-date">Purchased 1 month ago</div>
+            </div>
+          </div>
+          <div><div class="r-stars">★★★★★</div></div>
+        </div>
+        <p class="r-text">"I was switching products every week wondering why nothing worked. This guide made me realise <strong>I needed to give products 3–4 weeks minimum.</strong> Once I stopped switching, results started showing."</p>
+        <div class="r-highlight">✦ "Stopped wasting money on products with fragrance and alcohol that were causing my breakouts."</div>
+        <div class="r-verified">Verified Purchase</div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-top">
+          <div style="display:flex;align-items:center">
+            <div class="r-avatar">🎀</div>
+            <div class="r-info">
+              <div class="r-name">Kavya Nair</div>
+              <div class="r-loc">Chennai, Tamil Nadu</div>
+              <div class="r-date">Purchased 3 weeks ago</div>
+            </div>
+          </div>
+          <div><div class="r-stars">★★★★★</div></div>
+        </div>
+        <p class="r-text">"Bought this for my sister who had bad acne. She followed the 4-week plan and her skin has changed completely. Her friends started asking what she's using. <strong>We've already shared it with 4 friends.</strong>"</p>
+        <div class="r-verified">Verified Purchase</div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-top">
+          <div style="display:flex;align-items:center">
+            <div class="r-avatar">🌸</div>
+            <div class="r-info">
+              <div class="r-name">Riya Thakur</div>
+              <div class="r-loc">Hyderabad, Telangana</div>
+              <div class="r-date">Purchased 6 weeks ago</div>
+            </div>
+          </div>
+          <div><div class="r-stars">★★★★★</div></div>
+        </div>
+        <p class="r-text">"Replaced my ₹800 serum with Minimalist Niacinamide at ₹599 based on the guide. <strong>Better results. Half the price.</strong> The guide literally pays for itself many times over."</p>
+        <div class="r-verified">Verified Purchase</div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-top">
+          <div style="display:flex;align-items:center">
+            <div class="r-avatar">💫</div>
+            <div class="r-info">
+              <div class="r-name">Shruti Pandey</div>
+              <div class="r-loc">Lucknow, Uttar Pradesh</div>
+              <div class="r-date">Purchased 2 weeks ago</div>
+            </div>
+          </div>
+          <div><div class="r-stars">★★★★★</div></div>
+        </div>
+        <p class="r-text">"The mindset page made me emotional. Reading <strong>'you're comparing your real skin to something that isn't real'</strong> hit differently. This guide is kind in a way most skincare content isn't."</p>
+        <div class="r-verified">Verified Purchase</div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-top">
+          <div style="display:flex;align-items:center">
+            <div class="r-avatar">🌺</div>
+            <div class="r-info">
+              <div class="r-name">Pooja Desai</div>
+              <div class="r-loc">Ahmedabad, Gujarat</div>
+              <div class="r-date">Purchased 4 weeks ago</div>
+            </div>
+          </div>
+          <div><div class="r-stars">★★★★★</div></div>
+        </div>
+        <p class="r-text">"Dry skin here. The skin barrier section explained EVERYTHING. I was over-washing and using too many actives. <strong>2 weeks after simplifying, my skin finally stopped feeling tight and flaky.</strong>"</p>
+        <div class="r-highlight">✦ "The 'less is more' message repeated throughout the guide made it actually stick."</div>
+        <div class="r-verified">Verified Purchase</div>
+      </div>
+
+      <div class="rcard">
+        <div class="rcard-top">
+          <div style="display:flex;align-items:center">
+            <div class="r-avatar">🌿</div>
+            <div class="r-info">
+              <div class="r-name">Divya Iyer</div>
+              <div class="r-loc">Coimbatore, Tamil Nadu</div>
+              <div class="r-date">Purchased 1 week ago</div>
+            </div>
+          </div>
+          <div><div class="r-stars">★★★★★</div></div>
+        </div>
+        <p class="r-text">"I prefer natural skincare and this guide covers it properly — not one random tip but a whole organised system. <strong>Finally a guide that doesn't push expensive products.</strong> The face pack section is gold."</p>
+        <div class="r-verified">Verified Purchase</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="scroll-hint">swipe to see more reviews</div>
+  <div class="r-dots" id="reviewDots"></div>
+  <p style="text-align:center;margin-top:16px;font-size:.75rem;color:rgba(255,255,255,.28)">Showing 9 of 847 verified reviews · All buyers received instant PDF access</p>
+</section>
+
+<!-- ── IS THIS FOR YOU ── -->
+<section class="for-you">
+  <div class="for-you-inner">
+    <div>
+      <div class="section-label">Is This For You?</div>
+      <h2 class="section-title">This guide is <em>made for you</em> if…</h2>
+      <ul class="check-list">
+        <li><span class="chk">✦</span> You're confused about skincare and don't know where to start</li>
+        <li><span class="chk">✦</span> You're dealing with acne, pimples, or dark spots</li>
+        <li><span class="chk">✦</span> You've tried many things but nothing stayed consistent</li>
+        <li><span class="chk">✦</span> You keep switching products and still see no real results</li>
+        <li><span class="chk">✦</span> You want something simple that fits into daily life</li>
+        <li><span class="chk">✦</span> You prefer natural care or can't afford expensive products</li>
+        <li><span class="chk">✦</span> You're tired of random tips and want one clear system</li>
+      </ul>
+    </div>
+    <div>
+      <div class="quote-box reveal">
+        <blockquote>"The problem was never your effort — it was never having the right direction."</blockquote>
+        <div class="qsub">✦ &nbsp; THE GLOW GUIDE PHILOSOPHY &nbsp; ✦</div>
+        <div style="margin-top:22px;border-top:1px solid rgba(255,255,255,.1);padding-top:18px;font-size:.84rem;color:rgba(242,196,190,.75);line-height:1.7">
+          Written specifically for Indian skin tones, Indian weather, and Indian budgets. Not copied from western beauty blogs. 🇮🇳
+        </div>
+      </div>
+      <div class="value-box reveal">
+        <div class="vbox-label">COMPARE THE VALUE</div>
+        <div class="vrow"><span class="lft">Dermatologist consultation</span><span class="rgt">₹800+</span></div>
+        <div class="vrow"><span class="lft">One face serum</span><span class="rgt">₹600+</span></div>
+        <div class="vrow"><span class="lft">Random YouTube advice</span><span class="rgt">Doesn't work</span></div>
+        <div class="vrow final"><span class="lft">This complete 25-page guide</span><span class="rgt">₹100</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 21-DAY PLAN ── -->
+<section class="section sec-center">
+  <div class="section-label">The System</div>
+  <h2 class="section-title" style="max-width:500px;margin:0 auto 12px">The 21-Day <em>Transformation</em></h2>
+  <p class="section-sub" style="margin:0 auto">Three clear phases. Each builds on the last. No guesswork.</p>
+
+  <div class="plan-row">
+    <div class="week-card">
+      <div class="week-circle"><span class="wnum">1</span><span class="wlbl">WEEK</span></div>
+      <div class="week-title">The Reset</div>
+      <p class="week-desc">Calm your skin, repair your barrier, strip everything back. Basic 3-step routine only.</p>
+    </div>
+    <div class="week-card">
+      <div class="week-circle"><span class="wnum">2</span><span class="wlbl">WEEK</span></div>
+      <div class="week-title">The Action</div>
+      <p class="week-desc">Introduce targeted treatments. Understand purging so you don't panic and quit at the wrong moment.</p>
+    </div>
+    <div class="week-card">
+      <div class="week-circle"><span class="wnum">3</span><span class="wlbl">WEEK</span></div>
+      <div class="week-title">The Results</div>
+      <p class="week-desc">Fewer breakouts. Marks fading. Skin feeling balanced. The confidence returning — properly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOCKED PREVIEW ── -->
+<section class="preview-section">
+  <div class="sec-center">
+    <div class="section-label">Sneak Peek</div>
+    <h2 class="section-title">A glimpse <em>inside the guide</em></h2>
+    <p class="section-sub" style="margin:0 auto">Full content unlocks immediately after payment. Here's what's waiting.</p>
+  </div>
+
+  <div class="preview-grid">
+    <div class="preview-card">
+      <div class="preview-top">
+        <div class="preview-content">Your skin journey is not linear. Some weeks it improves. Some days it feels worse. That doesn't mean it's not working. It means your skin is adjusting and healing. Be patient with yourself.</div>
+        <div class="preview-lock"><span class="lock-icon">🔒</span><span class="lock-text">UNLOCKS AFTER PURCHASE</span></div>
+      </div>
+      <div class="preview-bottom">
+        <div class="preview-pg">PAGE 4</div>
+        <div class="preview-title">Mindset & Reality</div>
+      </div>
+    </div>
+    <div class="preview-card">
+      <div class="preview-top">
+        <div class="preview-content">Morning: Cleanse → Moisturize → Sunscreen. Night: Cleanse → Treat → Moisturize. Lazy day minimum: just cleanse + sunscreen. Even this small routine beats skipping everything.</div>
+        <div class="preview-lock"><span class="lock-icon">🔒</span><span class="lock-text">UNLOCKS AFTER PURCHASE</span></div>
+      </div>
+      <div class="preview-bottom">
+        <div class="preview-pg">PAGES 8–9</div>
+        <div class="preview-title">AM & PM Routines</div>
+      </div>
+    </div>
+    <div class="preview-card">
+      <div class="preview-top">
+        <div class="preview-content">Week 1: Reset — basic routine only. Week 2: Treat — add treatment 2-3x/week. Week 3: Repair — stay consistent. Week 4: Assess — notice what's working.</div>
+        <div class="preview-lock"><span class="lock-icon">🔒</span><span class="lock-text">UNLOCKS AFTER PURCHASE</span></div>
+      </div>
+      <div class="preview-bottom">
+        <div class="preview-pg">PAGES 20–22</div>
+        <div class="preview-title">4-Week Action Plan</div>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:18px;font-size:.8rem;color:var(--muted)">🔒 Content protected. 25 pages unlock instantly after your ₹100 payment.</p>
+</section>
+
+<!-- ── HOW TO BUY ── -->
+<section class="how-section" id="buy">
+  <div class="section-label">Instant Access</div>
+  <h2 class="section-title">Pay once, <em>read forever.</em></h2>
+  <p class="section-sub" style="margin:0 auto">Secure, instant, automatic delivery. No waiting, no manual steps.</p>
+
+  <div class="steps-row">
+    <div class="step">
+      <div class="step-circle">💳<span class="step-n">1</span></div>
+      <div class="step-title">Click Buy</div>
+      <p class="step-desc">Tap the button below and pay ₹100 via any UPI app — GPay, PhonePe, Paytm.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">⚡<span class="step-n">2</span></div>
+      <div class="step-title">Instant Unlock</div>
+      <p class="step-desc">Payment is verified instantly and you are redirected to the PDF link automatically.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">📖<span class="step-n">3</span></div>
+      <div class="step-title">Read Forever</div>
+      <p class="step-desc">Download the PDF on your phone or laptop. Yours to keep forever.</p>
+    </div>
+  </div>
+
+  <div class="razorpay-box">
+    <div class="rzp-label">SECURE CHECKOUT</div>
+    <div class="rzp-title">Glow Guide — ₹100</div>
+    <div class="rzp-sub">Pay securely via UPI, Card, or Net Banking. PDF link delivered instantly after payment. No manual wait.</div>
+    <a href="REPLACE_WITH_YOUR_RAZORPAY_LINK" class="rzp-btn" id="buyButton">
+      🔒 &nbsp; Get Instant Access — ₹100
+    </a>
+    <div class="rzp-security">🔒 &nbsp; 256-bit SSL Secured &nbsp;·&nbsp; Trusted by 5,677+ buyers &nbsp;·&nbsp; Instant Access</div>
+  </div>
+</section>
+
+<!-- ── TRUST STRIP ── -->
+<div class="trust-strip">
+  <div class="trust-item">🔒 100% Secure Payment</div>
+  <div class="trust-item">⚡ Instant PDF Delivery</div>
+  <div class="trust-item">📱 Works on Any Device</div>
+  <div class="trust-item">♾️ Keep Forever</div>
+  <div class="trust-item">🇮🇳 Made for Indian Skin</div>
+</div>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <div class="sec-center">
+    <div class="section-label">Questions?</div>
+    <h2 class="section-title">Got <em>doubts?</em> We've got answers.</h2>
+  </div>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q">How will I receive the PDF after paying? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Immediately and automatically. After your payment is successful, you are instantly redirected to the private PDF download link. No waiting, no manual process required.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is the payment secure? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes, completely. All payments are processed through PCI-DSS compliant secure gateways. Your transaction is 256-bit SSL encrypted. We do not store or have access to your card numbers, UPI PIN, or net banking credentials. Your payment goes directly to a verified merchant account.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What if I don't see results in 21 days? <span class="faq-icon">+</span></button>
+      <div class="faq-a">The guide sets realistic expectations from the start — skin doesn't transform overnight. Most people see early improvement by week 2–3 with consistent use. The guide also explains purging, so you won't quit at the wrong time. If you follow the system properly, results come.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is this for all skin types? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes. The guide starts by helping you identify your exact skin type (oily, dry, combination, sensitive) and provides specific guidance for each type. Every section adapts to your skin's needs — not one-size-fits-all advice.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do I need to buy expensive products? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Absolutely not. The product section lists options starting from ₹200, all available on Nykaa and Amazon India. Many sections also provide natural alternatives using kitchen ingredients like aloe vera, honey, haldi, and besan.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is ₹100 really the price? Any hidden charges? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Yes — ₹100, no hidden charges, no subscription, no upsells. This is a launch price for the first 100 buyers. After that, it increases. Pay once, keep the PDF forever.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What if I need a refund? <span class="faq-icon">+</span></button>
+      <div class="faq-a">Since this is a digital product delivered instantly, refunds are not applicable once the PDF link has been accessed. Please read the guide description carefully before purchasing. If you face any technical issue in receiving your PDF, contact our support email and we will resolve it.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="final-cta">
+  <div class="section-label" style="text-align:center">Don't Wait</div>
+  <h2 class="section-title" style="text-align:center;max-width:500px;margin:0 auto 12px">Your glow-up <em>starts today.</em></h2>
+  <p class="section-sub" style="text-align:center;margin:0 auto">5,677 people already have clearer skin. For the price of a cup of coffee, join them.</p>
+  <div style="text-align:center">
+    <a href="REPLACE_WITH_YOUR_RAZORPAY_LINK" class="final-large-btn" id="finalBuyButton">
+      🔒 Get the Glow Guide — ₹100 🌸
+    </a>
+  </div>
+  <div class="guarantee-row">
+    <div class="g-item">🔒 Secure Payment</div>
+    <div class="g-item">⚡ Instant Delivery</div>
+    <div class="g-item">📱 Any Device</div>
+    <div class="g-item">♾️ Keep Forever</div>
+    <div class="g-item">🇮🇳 Indian Skin Focus</div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span class="f-logo">Glow Guide 🌸</span>
+  <div class="f-links">
+    <a href="#" onclick="openModal('privacy');return false;">Privacy Policy</a>
+    <a href="#" onclick="openModal('terms');return false;">Terms of Service</a>
+    <a href="#" onclick="openModal('refund');return false;">Refund Policy</a>
+    <a href="#" onclick="openModal('contact');return false;">Contact Us</a>
+  </div>
+  <div class="f-contact">
+    <p>Support: aryan.jagtap.0077@gmail.com</p>
+    <p>Merchant: Aryan Suryakant Jagtap</p>
+    <p>Pune, Maharashtra, 411046, India</p>
+  </div>
+  <p class="f-note">This is a digital product. No physical shipping involved. PDF access is granted instantly after successful payment. Results may vary based on individual skin type and consistency of routine followed. This guide is not a substitute for professional dermatologist advice.</p>
+</footer>
+
+<!-- ── LEGAL MODALS ── -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+
+<div class="modal" id="modal-privacy">
+  <div class="modal-header">
+    <h3 class="modal-title">Privacy Policy</h3>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="modal-body">
+    <p class="modal-meta">Last Updated: April 28, 2026</p>
+    <p>This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from our website.</p>
+    <h4>A. Information We Collect</h4>
+    <p>When you make a purchase, we collect certain information from you, including your name, billing address, and email address. We refer to this as "Order Information."</p>
+    <h4>B. How We Use Your Information</h4>
+    <p>We use the Order Information that we collect to fulfil any orders placed through the site (including providing you with invoices and/or order confirmations). Additionally, we use this Order Information to communicate with you and screen our orders for potential risk or fraud.</p>
+    <h4>C. Payment Security</h4>
+    <p>All payments are processed through PCI-DSS compliant gateways. We do not store or have access to your credit card numbers, UPI PINs, or net banking credentials.</p>
+    <h4>D. Data Retention</h4>
+    <p>When you place an order through the site, we will maintain your Order Information for our records unless and until you ask us to delete this information.</p>
+    <h4>E. Your Rights</h4>
+    <p>If you are a resident of India, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. Contact us at <strong>aryan.jagtap.0077@gmail.com</strong> to exercise these rights.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-terms">
+  <div class="modal-header">
+    <h3 class="modal-title">Terms of Service</h3>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="modal-body">
+    <h4>1. Overview</h4>
+    <p>This website is operated by Aryan Suryakant Jagtap. Throughout the site, the terms "we", "us" and "our" refer to the Glow Guide brand. By purchasing our product, you engage in our "Service" and agree to be bound by the following terms and conditions.</p>
+    <h4>2. Digital Product License</h4>
+    <p>Upon payment of the fees for the Glow Guide, we grant you a non-exclusive, non-transferable, revocable license to access and read the content for personal, non-commercial use. You agree not to reproduce, duplicate, copy, sell, or exploit any portion of the Guide without express written permission by us.</p>
+    <h4>3. Medical &amp; Results Disclaimer</h4>
+    <p>The content provided in the Glow Guide is for informational purposes only and is not intended as medical advice. We do not guarantee specific results as skin types vary. Always perform a patch test before trying new products or DIY remedies. We are not liable for any skin irritations or reactions.</p>
+    <h4>4. Accuracy of Billing</h4>
+    <p>You agree to provide current, complete, and accurate purchase and account information for all purchases made.</p>
+    <h4>5. Pricing</h4>
+    <p>Prices for our products are subject to change without notice. We shall not be liable to you or to any third-party for any modification or price change.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-refund">
+  <div class="modal-header">
+    <h3 class="modal-title">Refund &amp; Cancellation Policy</h3>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="modal-body">
+    <h4>1. No Refund for Digital Goods</h4>
+    <p>Due to the digital nature of the Glow Guide (PDF/E-book), all sales are final. Once the payment is successful and the digital access link is provided via redirect or email, the product is considered "consumed," and we do not offer any refunds or exchanges.</p>
+    <h4>2. Acceptance of this Policy</h4>
+    <p>By purchasing the Glow Guide, you acknowledge that you have read this refund policy and agree to it in full. We recommend contacting us if you have any questions before making a purchase.</p>
+    <h4>3. Technical Issues</h4>
+    <p>In the event that you are unable to access the link after a successful payment, contact <strong>aryan.jagtap.0077@gmail.com</strong> with proof of purchase. We will manually verify and send the file via email within 24 hours.</p>
+    <h4>4. Duplicate Charges</h4>
+    <p>If a technical error results in a duplicate charge, please report it immediately. Verified duplicate payments will be refunded to the original payment method within 5–7 business days.</p>
+    <h4>5. Cancellations</h4>
+    <p>Order cancellations are not possible once the transaction is initiated, as delivery is automated and instantaneous.</p>
+  </div>
+</div>
+
+<div class="modal" id="modal-contact">
+  <div class="modal-header">
+    <h3 class="modal-title">Contact Us</h3>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="modal-body">
+    <p>Questions about the Glow Guide or your order? Reach us through the following:</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-label">Customer Support Email</div>
+        <div class="contact-val"><a href="mailto:aryan.jagtap.0077@gmail.com">aryan.jagtap.0077@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Response Time</div>
+        <div class="contact-val">24 to 48 hours</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Support Hours</div>
+        <div class="contact-val">10:00 AM – 6:00 PM (IST), Monday to Saturday</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Legal Name</div>
+        <div class="contact-val">Aryan Suryakant Jagtap</div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-label">Registered Address</div>
+        <div class="contact-val">Pune, Maharashtra, 411046, India</div>
+      </div>
+      <div class="contact-item" style="grid-column:1/-1">
+        <div class="contact-label">Grievance Officer</div>
+        <div class="contact-val">Aryan Suryakant Jagtap &nbsp;·&nbsp; <a href="mailto:aryan.jagtap.0077@gmail.com">aryan.jagtap.0077@gmail.com</a><br><span style="font-size:.78rem;opacity:.7">In accordance with the Information Technology Act 2000</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── STICKY FOOTER ── -->
+<div class="sticky-footer">
+  <div class="sf-left">
+    <span class="sfprice">₹100 <span class="sfwas">₹599</span></span>
+    <span class="sftag">🔥 Launch Price · 5,677+ Downloaded</span>
+  </div>
+  <a href="REPLACE_WITH_YOUR_RAZORPAY_LINK" class="sf-btn" id="stickyBuyButton">Buy Now — Instant Access →</a>
+</div>
+
+<script>
+// ── COUNTDOWN TIMER (persists via localStorage) ──
+const TIMER_KEY = 'gg_timer_end_v2';
+const DURATION  = 15 * 60 * 1000; // 15 minutes
+
+function getEndTime() {
+  let end = localStorage.getItem(TIMER_KEY);
+  if (!end || Date.now() > parseInt(end)) {
+    end = Date.now() + DURATION;
+    localStorage.setItem(TIMER_KEY, end);
+  }
+  return parseInt(end);
+}
+function updateTimer() {
+  const left = Math.max(0, getEndTime() - Date.now());
+  const m = Math.floor(left / 60000);
+  const s = Math.floor((left % 60000) / 1000);
+  const el = document.getElementById('timerDisplay');
+  if (el) el.textContent = left > 0 ? `${m}:${s < 10 ? '0' : ''}${s}` : 'Expired';
+}
+updateTimer();
+setInterval(updateTimer, 1000);
+
+// ── RAZORPAY CREATOR/AFFILIATE TRACKING ──
+const params = new URLSearchParams(window.location.search);
+const ref = params.get('ref');
+const links = {
+  'default': 'REPLACE_WITH_YOUR_RAZORPAY_LINK'
+  // Add affiliate links here:
+  // 'influencer1': 'https://rzp.io/l/your-link-1',
+  // 'influencer2': 'https://rzp.io/l/your-link-2',
+};
+const payLink = links[ref] || links['default'];
+
+['buyButton','finalBuyButton','stickyBuyButton'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) { el.href = payLink; el.target = '_blank'; }
+});
+document.querySelector('.nav-btn').href = '#buy';
+
+// ── SCROLL REVEAL ──
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.what-card').forEach((el,i) => { el.style.transitionDelay=`${i*70}ms`; io.observe(el); });
+document.querySelectorAll('.stat').forEach((el,i) => { el.style.transitionDelay=`${i*90}ms`; io.observe(el); });
+document.querySelectorAll('.week-card').forEach((el,i) => { el.style.transitionDelay=`${i*120}ms`; io.observe(el); });
+// ── REVIEWS SCROLL DOTS ──
+const reviewsScroll = document.getElementById('reviewsScroll');
+const reviewDots = document.getElementById('reviewDots');
+const reviewCards = reviewsScroll ? reviewsScroll.querySelectorAll('.rcard') : [];
+
+if (reviewCards.length && reviewDots) {
+  reviewCards.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'r-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => {
+      reviewCards[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    };
+    reviewDots.appendChild(d);
+  });
+
+  reviewsScroll.addEventListener('scroll', () => {
+    const scrollLeft = reviewsScroll.scrollLeft;
+    const cardWidth = reviewCards[0].offsetWidth + 16;
+    const idx = Math.round(scrollLeft / cardWidth);
+    reviewDots.querySelectorAll('.r-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+  }, { passive: true });
+}
+
+// drag-to-scroll on desktop
+if (reviewsScroll) {
+  let isDown = false, startX, scrollL;
+  reviewsScroll.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - reviewsScroll.offsetLeft; scrollL = reviewsScroll.scrollLeft; });
+  reviewsScroll.addEventListener('mouseleave', () => isDown = false);
+  reviewsScroll.addEventListener('mouseup', () => isDown = false);
+  reviewsScroll.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - reviewsScroll.offsetLeft;
+    reviewsScroll.scrollLeft = scrollL - (x - startX) * 1.2;
+  });
+}
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ── FAQ ──
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// ── SMOOTH SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+// ── LEGAL MODALS ──
+function openModal(type) {
+  document.getElementById('modalOverlay').classList.add('open');
+  document.getElementById('modal-' + type).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.querySelectorAll('.modal').forEach(m => m.classList.remove('open'));
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
