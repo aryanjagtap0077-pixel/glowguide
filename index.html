@@ -1316,8 +1316,9 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   });
 });
 
-// ── SMOOTH SCROLL ──
+// ── SMOOTH SCROLL (skip modal links) ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {
+  if (a.getAttribute('href') === '#' || a.getAttribute('onclick')) return;
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
