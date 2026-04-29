@@ -1249,7 +1249,8 @@ setInterval(updateTimer, 1000);
 const params = new URLSearchParams(window.location.search);
 const ref = params.get('ref');
 const payLinks = {
-  'default': 'https://rzp.io/rzp/glowguide1'
+  'default': 'https://rzp.io/rzp/glowguide1',
+  'vaishnavi': 'https://pages.razorpay.com/glowguide-vaishnavi'
 };
 const payLink = payLinks[ref] || payLinks['default'];
 const isLive = !payLink.includes('REPLACE_WITH');
@@ -1270,7 +1271,6 @@ const isLive = !payLink.includes('REPLACE_WITH');
     });
   }
 });
-document.querySelector('.nav-btn').href = '#buy';
 
 // ── SCROLL REVEAL ──
 const io = new IntersectionObserver(entries => {
@@ -1282,6 +1282,7 @@ const io = new IntersectionObserver(entries => {
 document.querySelectorAll('.what-card').forEach((el,i) => { el.style.transitionDelay=`${i*70}ms`; io.observe(el); });
 document.querySelectorAll('.stat').forEach((el,i) => { el.style.transitionDelay=`${i*90}ms`; io.observe(el); });
 document.querySelectorAll('.week-card').forEach((el,i) => { el.style.transitionDelay=`${i*120}ms`; io.observe(el); });
+
 // ── REVIEWS SCROLL DOTS ──
 const reviewsScroll = document.getElementById('reviewsScroll');
 const reviewDots = document.getElementById('reviewDots');
@@ -1305,21 +1306,6 @@ if (reviewCards.length && reviewDots) {
   }, { passive: true });
 }
 
-// drag-to-scroll on desktop
-if (reviewsScroll) {
-  let isDown = false, startX, scrollL;
-  reviewsScroll.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - reviewsScroll.offsetLeft; scrollL = reviewsScroll.scrollLeft; });
-  reviewsScroll.addEventListener('mouseleave', () => isDown = false);
-  reviewsScroll.addEventListener('mouseup', () => isDown = false);
-  reviewsScroll.addEventListener('mousemove', e => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - reviewsScroll.offsetLeft;
-    reviewsScroll.scrollLeft = scrollL - (x - startX) * 1.2;
-  });
-}
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
 // ── FAQ ──
 document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -1330,7 +1316,7 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   });
 });
 
-// ── SMOOTH SCROLL (skip modal links) ──
+// ── SMOOTH SCROLL ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   if (a.getAttribute('href') === '#' || a.getAttribute('onclick')) return;
   a.addEventListener('click', e => {
@@ -1338,6 +1324,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+
 // ── LEGAL MODALS ──
 function openModal(type) {
   document.getElementById('modalOverlay').classList.add('open');
