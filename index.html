@@ -1112,6 +1112,30 @@ footer{background:#2E1811;padding:50px 6% 100px;text-align:center}
 <!-- ── LEGAL MODALS ── -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
 
+<div class="modal" id="launchModal">
+  <div class="modal-header">
+    <h3 class="modal-title">Launching Very Soon! 🌸</h3>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="modal-body" style="text-align:center;padding:32px 28px 36px">
+    <div style="font-size:3rem;margin-bottom:16px">🚀</div>
+    <p style="font-size:1.05rem;color:var(--mocha);font-weight:500;margin-bottom:12px">
+      We're setting up secure payments right now.
+    </p>
+    <p style="font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:24px">
+      The Glow Guide will be available for purchase very shortly.<br>
+      Check back in 24–48 hours — we're almost ready!
+    </p>
+    <div style="background:var(--light-pink);border-radius:12px;padding:16px 20px;margin-bottom:20px">
+      <div style="font-size:.72rem;letter-spacing:.1em;color:var(--gold);margin-bottom:6px">HAVE A QUESTION?</div>
+      <div style="font-size:.9rem;color:var(--mocha)">Email us at <a href="mailto:aryan.jagtap.0077@gmail.com" style="color:var(--rose);font-weight:500">aryan.jagtap.0077@gmail.com</a></div>
+    </div>
+    <button onclick="closeModal()" style="background:var(--mocha);color:var(--white);border:none;border-radius:50px;padding:12px 32px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:500;cursor:pointer;transition:all .3s">
+      Got it, I'll check back soon
+    </button>
+  </div>
+</div>
+
 <div class="modal" id="modal-privacy">
   <div class="modal-header">
     <h3 class="modal-title">Privacy Policy</h3>
@@ -1239,20 +1263,32 @@ function updateTimer() {
 updateTimer();
 setInterval(updateTimer, 1000);
 
-// ── RAZORPAY CREATOR/AFFILIATE TRACKING ──
+// ── BUY BUTTONS — show "launching soon" until payment link is ready ──
 const params = new URLSearchParams(window.location.search);
 const ref = params.get('ref');
-const links = {
+const payLinks = {
   'default': 'REPLACE_WITH_YOUR_RAZORPAY_LINK'
-  // Add affiliate links here:
+  // Add affiliate links here later:
   // 'influencer1': 'https://rzp.io/l/your-link-1',
-  // 'influencer2': 'https://rzp.io/l/your-link-2',
 };
-const payLink = links[ref] || links['default'];
+const payLink = payLinks[ref] || payLinks['default'];
+const isLive = !payLink.includes('REPLACE_WITH');
 
 ['buyButton','finalBuyButton','stickyBuyButton'].forEach(id => {
   const el = document.getElementById(id);
-  if (el) { el.href = payLink; el.target = '_blank'; }
+  if (!el) return;
+  if (isLive) {
+    el.href = payLink;
+    el.target = '_blank';
+  } else {
+    el.href = '#';
+    el.addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('launchModal').classList.add('open');
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  }
 });
 document.querySelector('.nav-btn').href = '#buy';
 
